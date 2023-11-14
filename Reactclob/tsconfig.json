@@ -7,14 +7,16 @@
     "skipLibCheck": true,
     "esModuleInterop":true,
     /* Bundler mode */
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "moduleResolution": "NodeNext",
     "isolatedModules": true,
     "strict": false,
     "noEmit": true,
     "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
 
     /* Linting */
   },
