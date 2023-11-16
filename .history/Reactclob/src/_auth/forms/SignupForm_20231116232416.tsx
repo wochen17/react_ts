@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button.jsx";
 import { Input } from "@/components/ui/input.jsx";
-import { createUserAccount } from "@/lib/appwrite/api.js";
 import { SignupValidationSchema } from "@/lib/validation";
 
 import {
@@ -28,10 +27,9 @@ function SignupForm() {
       password: "",
     },
   });
-  async function onSubmit(values: z.infer<typeof SignupValidationSchema>) {
-    const newAccount = createUserAccount(values);
-    console.log(newAccount);
-  }
+  async const onSubmit = (values: z.infer<typeof SignupValidationSchema>) => {
+    console.log(values);
+  };
   return (
     <>
       <Form {...form}>
@@ -105,9 +103,8 @@ function SignupForm() {
               Alerady have a account?
               <Link
                 to="/signin"
-                className="text-primary-500 text-small-semibold ml-1"
-              >
-                Log in
+                className="text-primary-500 text-small-semibold ml-1">
+                  Log in
               </Link>
             </p>
           </form>

@@ -105,9 +105,8 @@ function SignupForm() {
               Alerady have a account?
               <Link
                 to="/signin"
-                className="text-primary-500 text-small-semibold ml-1"
-              >
-                Log in
+                className="text-primary-500 text-small-semibold ml-1">
+                  Log in
               </Link>
             </p>
           </form>
